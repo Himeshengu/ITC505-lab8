@@ -1,0 +1,205 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('https://www.w3schools.com/w3images/forest.jpg'); /* Background Image */
+    background-size: cover; /* Make the background image cover the full page */
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Center the form in the middle of the screen */
+.form-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for the form */
+    padding: 30px 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out; /* Animation for smooth form appearance */
+}
+
+/* Form title */
+h2 {
+    text-align: center;
+    color: #ffd700; /* Gold color */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Form inputs and labels */
+label {
+    font-size: 1rem;
+    color: #ffd700;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff; /* Text color for all input fields */
+    font-size: 1rem;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Text color for password and confirm password fields */
+input[type="password"] {
+    color: #fff; /* Set text color to white */
+}
+
+/* Hover effect on input fields */
+input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover {
+    background-color: #444;
+    border-color: #ffd700;
+}
+
+/* Focus effect on input fields */
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #ffd700;
+    outline: none;
+    background-color: #444;
+}
+
+/* Password Strength Message */
+#passwordStrengthMessage {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.weak {
+    color: red;
+}
+
+.medium {
+    color: orange;
+}
+
+.strong {
+    color: green;
+}
+
+/* Error Messages */
+.errorMessages {
+    color: red;
+    font-size: 0.9rem;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect on submit button */
+button:hover {
+    background-color: #ffcc00;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for modal */
+    animation: fadeInModal 1s ease-out;
+}
+
+.modal-content {
+    background-color: black; /* Changed background to black */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.5s ease-in-out;
+}
+
+/* Close button inside modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Hover effect on close button */
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Modal Fade-in and Slide-up animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Modal Styles for Success Message */
+.success-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: black; /* Changed text color to black */
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.success-message p {
+    margin: 0;
+    font-size: 1.5rem;
+}
